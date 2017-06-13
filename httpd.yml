@@ -1,14 +1,16 @@
 --- installing httpd 
-- name: Installing httpd
-  hosts: '{{ hosts }}'
+- hosts: '{{myhosts}}'
   remote_user: ansible
   become_method: sudo
-  gather_facts: true
+  become_user: root
   connection: ssh
+  gather_facts: '{{gather}}'
   vars:
-  hosts: local,myhost1,myhost2
-  tasks: 
-  - name: Installing httpd
-    yum: 
-      name: httpd
+    myhosts: local,myhost1,myhost2
+    gather: yes
+    pkg: httpd
+  tasks:
+  - name: Install the indicated softwaer
+    yum:
+      name: '{{ pkg }}'
       state: latest
