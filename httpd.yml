@@ -1,13 +1,12 @@
 --- #installing httpd 
 - name: installing
-  hosts: '{{ hosts }}'
+  hosts: myhost1
   remote_user: ansible
   become: true
   become_method: sudo
   connection: ssh
   gather_facts: '{{gather}}'
   vars:
-    hosts: myhost1
     gather: true
     package: httpd
   tasks:
