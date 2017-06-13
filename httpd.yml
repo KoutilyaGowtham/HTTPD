@@ -1,4 +1,4 @@
---- installing httpd 
+--- #installing httpd 
   -name: installing
   hosts: '{{myhosts}}'
   remote_user: ansible
