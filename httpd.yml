@@ -7,7 +7,6 @@
   connection: ssh
   gather_facts: '{{gather}}'
   vars:
-    myhosts:
     gather: yes
     pkg: httpd
   tasks:
