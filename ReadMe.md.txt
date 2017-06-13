@@ -1,0 +1,3 @@
+-- Install httpd using ansible playbook in three servers
+-- Use Jenkins,GitHub,Ansible
+-- Add webhook to jenkins job, whenever you push the file into the git repository webhook will automitically push the file to jenkins to build the code. 
