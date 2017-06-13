@@ -2,15 +2,16 @@
 - name: installing
   hosts: '{{myhosts}}'
   remote_user: ansible
+  become: true
   become_method: sudo
   become_user: root
   connection: ssh
   gather_facts: '{{gather}}'
   vars:
-    gather: yes
-    pkg: httpd
+    gather: true
+    package: httpd
   tasks:
   - name: Install the indicated softwaer
     yum:
-      name: '{{ pkg }}'
+      name: '{{ package }}'
       state: latest
