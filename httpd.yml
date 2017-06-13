@@ -7,7 +7,7 @@
   connection: ssh
   gather_facts: '{{gather}}'
   vars:
-    hosts: all
+    hosts: myhost1
     gather: true
     package: httpd
   tasks:
