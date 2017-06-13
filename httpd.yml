@@ -1,0 +1,12 @@
+--- installing httpd 
+- name: Installing httpd
+  hosts: all
+  remote_user: ansible
+  become_method: sudo
+  gather_facts: true
+  connection: ssh
+  tasks: 
+  - name: Installing httpd
+    yum: 
+      name: httpd
+      state: latest
