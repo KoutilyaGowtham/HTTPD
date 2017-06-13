@@ -1,6 +1,6 @@
 --- #installing httpd 
 - name: installing
-  hosts: myhost1
+  hosts: local
   remote_user: ansible
   become: true
   become_method: sudo
